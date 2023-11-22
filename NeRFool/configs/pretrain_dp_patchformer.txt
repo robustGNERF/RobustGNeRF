@@ -1,0 +1,38 @@
+### INPUT
+expname = gnt_plain_src4_nearby3_1e0_1e-2_384x512_cont
+rootdir = /disk1/chanho/3d  # REPLACE THIS with YOUR PATH.
+render_stride = 2
+distributed = False
+
+## dataset
+train_dataset = llff+spaces+ibrnet_collected
+dataset_weights = [0.375,0.1875,0.4375]
+eval_dataset = llff_test
+eval_scenes = [trex, fern, flower, leaves, room, fortress, horns, orchids]
+
+###
+nearby_imgs = 3
+num_source_views = 4
+trans_depth = 4
+
+### TRAINING
+# ckpt_path = /disk1/chanho/3d/MetaFool/out/gnt_plain_src4_nearby3_1e0_1e-2_384x512/model_115000.pth
+N_rand = 320  # 500
+lrate_feature = 0.001
+lrate_mlp = 0.0005
+lrate_decay_factor = 0.5
+lrate_decay_steps = 50000
+
+### TESTING
+chunk_size = 2000
+
+### RENDERING
+N_importance = 64
+N_samples = 64
+inv_uniform = True
+white_bkgd = False
+
+### CONSOLE AND TENSORBOARD
+i_img = 3000
+i_print = 100
+i_weights = 5000

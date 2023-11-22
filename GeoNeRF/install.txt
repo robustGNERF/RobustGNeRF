@@ -1,0 +1,3 @@
+conda install -c conda-forge protobuf
+python3 -m pip install setuptools==59.5.0
+python3 -m pip uninstall tensorflow-gpu

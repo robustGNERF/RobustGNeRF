@@ -1,0 +1,28 @@
+### INPUT
+expname = Generalizable
+logdir =  logs/eval_geonerf_src5_near4
+nb_views = 5
+eval_mode = True
+## load_ckpt =  
+
+## dataset
+dataset_name = objaverse
+dtu_path = Path to DTU MVS
+dtu_pre_path = Path to preprocessed DTU MVS
+llff_path = /home/chan/data/objaverse/final/objaverse_blur_dataset
+ibrnet1_path = Path to IBRNet dataset 1 (ibrnet_collected_1)
+ibrnet2_path = Path to IBRNet dataset 1 (ibrnet_collected_2)
+nerf_path = Path to NeRF dataset (nerf_synthetic)
+llff_test_path = /home/chan/data/objaverse/final/objaverse_blur_dataset
+scene = None
+
+### TESTING
+chunk = 4096  ### Reduce it to save memory
+burst_training = False
+dip_feat = True
+clean_src_imgs = False
+downscale_val = 1.0
+
+### TRAINING
+num_steps = 250000
+lrate = 0.0005

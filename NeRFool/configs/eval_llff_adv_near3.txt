@@ -1,0 +1,21 @@
+### INPUT
+expname = eval_time_gnt_adv_near3
+rootdir = /disk1/chanho/3d
+ckpt_path = 
+distributed = False
+num_source_views = 4
+nearby_imgs = 3
+ckpt_path = /disk1/chanho/3d/MetaFool/out/gnt_adv_src4_nearby3_1e0_1e-2_run2/model_240000.pth
+
+## dataset
+eval_dataset = llff_test
+eval_scenes = fern
+
+### TESTING
+chunk_size = 4096
+
+### RENDERING
+N_importance = 64
+N_samples = 64
+inv_uniform = True
+white_bkgd = False

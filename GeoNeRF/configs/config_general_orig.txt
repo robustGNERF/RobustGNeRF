@@ -1,0 +1,25 @@
+### INPUT
+expname = Generalizable
+logdir = ./logs
+nb_views = 6
+
+## dataset
+dataset_name = objaverse
+dtu_path = Path to DTU MVS
+dtu_pre_path = Path to preprocessed DTU MVS
+llff_path = /disk1/chanho/3d/data/real_iconic_noface
+ibrnet1_path = Path to IBRNet dataset 1 (ibrnet_collected_1)
+ibrnet2_path = Path to IBRNet dataset 1 (ibrnet_collected_2)
+nerf_path = Path to NeRF dataset (nerf_synthetic)
+llff_test_path = /disk1/chanho/3d/data/nerf_llff_data
+scene = None
+
+### TESTING
+chunk = 4096  ### Reduce it to save memory
+burst_training = True
+bpn_prenet = False
+downscale_val = 0.5
+
+### TRAINING
+num_steps = 250000
+lrate = 0.0005
